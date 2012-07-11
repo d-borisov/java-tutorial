@@ -1,24 +1,31 @@
 package oleg;
 
 public class ImmutableBicycle {
-  private int cadence = 0;
-  private int speed = 0;
-  private int gear = 1;
+  private final int cadence;
+  private final int speed;
+  private final int gear;
+
+  public ImmutableBicycle() {
+    this(0, 0, 1);
+  }
+
+  public ImmutableBicycle(int cadence, int speed, int gear) {
+    this.cadence = cadence;
+    this.speed = speed;
+    this.gear = gear;
+  }
 
   void changeCadence(int newValue) {
-    cadence = newValue;
   }
 
   void changeGear(int newValue) {
-    gear = newValue;
   }
 
-  void speedUp(int increment) {
-    speed += increment;
+  ImmutableBicycle speedUp(int increment) {
+    return new ImmutableBicycle(this.cadence, this.speed + increment, this.gear);
   }
 
   void applyBrakes(int decrement) {
-    speed -= decrement;
   }
 
   String states() {
