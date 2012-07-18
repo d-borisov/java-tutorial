@@ -1,5 +1,3 @@
-package src.kirill;
-
 public class Arrays {
 
   //declaration array first method
