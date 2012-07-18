@@ -1,5 +1,8 @@
 package dima.operators;
 
+import java.lang.String;
+import java.lang.System;
+
 class ArithmeticDemo {
 
     public static void main (String[] args){

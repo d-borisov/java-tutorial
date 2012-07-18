@@ -1,5 +1,7 @@
 package dima.operators;
 
+import java.lang.String;
+
 class ConcatDemo {
     public static void main(String[] args){
         String firstString = "This is";
