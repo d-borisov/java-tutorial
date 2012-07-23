@@ -44,16 +44,16 @@ class ArrayDemo {
                 + anArray[9]);
     }
 
-    private testSeclarations() {
+    private void testSeclarations() {
         // create an array of integers
+        int[] anArray;
         anArray = new int[10];
 
         anArray[0] = 100; // initialize first element
         anArray[1] = 200; // initialize second element
         anArray[2] = 300; // etc.
 
-        int[] anArray = {
-                100, 200, 300,
+        anArray = new int[]{100, 200, 300,
                 400, 500, 600,
                 700, 800, 900, 1000
         };
