@@ -6,6 +6,12 @@ class Bicycle {
   int speed = 0;
   int gear = 1;
 
+  Bicycle(int cadence, int gear, int speed) {
+    this.cadence = cadence;
+    this.gear = gear;
+    this.speed = speed;
+  }
+
   void changeCadence(int newValue) {
     cadence = newValue;
   }
