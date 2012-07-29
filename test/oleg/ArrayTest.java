@@ -70,6 +70,12 @@ public class ArrayTest {
     assertThat(ms, is("Ms. Jones"));
   }
 
+  @Test
+  public void comma_at_the_end() throws Exception {
+    int[] arr = {0,};
+
+    assertThat(arr.length, is(1));
+  }
 
   @Test
   public void copy_array() throws Exception {
