@@ -1,3 +1,5 @@
+package kirill;
+
 public class Arrays {
 
   //declaration array first method

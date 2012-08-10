@@ -1,3 +1,5 @@
+package kirill;
+
 public class Ramification {
 
   static {

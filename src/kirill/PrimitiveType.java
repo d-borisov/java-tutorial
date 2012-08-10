@@ -1,3 +1,5 @@
+package kirill;
+
 public class PrimitiveType {
   //default value primitiv types
   private byte b = 0;
