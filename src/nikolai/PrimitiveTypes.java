@@ -32,7 +32,7 @@ public class PrimitiveTypes {
         float f1  = 123.4f;
         System.out.printf("f1 is %f \n",f1);//WTF???
 
-        //String literals
+        //Strings literals
         System.out.println("I want to print some quotes \"\"\"quotes\"\"\" from the new \n line. And couple of backslashes too \\ \\ \\ \\ ");
 
         //using underscore
