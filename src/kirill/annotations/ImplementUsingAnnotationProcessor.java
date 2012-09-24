@@ -1,10 +1,9 @@
-package kirill.Annotations;
+package kirill.annotations;
 
 import javax.annotation.processing.SupportedAnnotationTypes;
-import java.util.Arrays;
 
 @Using
-@SupportedAnnotationTypes("kirill.Annotations.Using")
+@SupportedAnnotationTypes("kirill.annotations.Using")
 public class ImplementUsingAnnotationProcessor {
   public static void main(String[] args) {
     ImplementUsingAnnotationProcessor a = new ImplementUsingAnnotationProcessor();

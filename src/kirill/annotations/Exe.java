@@ -1,4 +1,4 @@
-package kirill.Annotations;
+package kirill.annotations;
 
 public class Exe {
 
