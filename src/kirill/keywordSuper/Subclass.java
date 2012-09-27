@@ -1,4 +1,4 @@
-package kirill.KeywordSuper;
+package kirill.keywordSuper;
 
 public class Subclass extends Superclass {
   // overrides printMethod in Superclass

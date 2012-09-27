@@ -1,4 +1,4 @@
-package kirill.Enum;
+package kirill.enumeration;
 
 public enum DevelopmentTeam {
     JUNIOR_DEV("Kirill"),

@@ -1,4 +1,4 @@
-package kirill.KeywordSuper;
+package kirill.keywordSuper;
 
 public class Superclass {
 

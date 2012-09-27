@@ -1,4 +1,4 @@
-package kirill.Inheritance;
+package kirill.inheritance;
 
 public class Animal {
   public static void testClassMethod() {
