@@ -18,7 +18,7 @@ public class Pecs {
     final ArrayList<Double> numbers = new ArrayList<>();
 
 
-    pili.addAll(numbers);
+//    pili.addAll(numbers);
   }
 
   public static void main(String[] args) {
