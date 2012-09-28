@@ -15,8 +15,8 @@ public class CopyBytes {
 
       checkFileAndCreateIfNotExist();
 
-      in = new FileInputStream("xanadu.txt");
-      out = new FileOutputStream("outAgain.txt");
+      in = new FileInputStream("./out/xanadu.txt");
+      out = new FileOutputStream("./out/outAgain.txt");
       int c;
 
       while ((c = in.read()) != -1) {
@@ -33,7 +33,7 @@ public class CopyBytes {
   }
 
   private static void checkFileAndCreateIfNotExist() throws IOException {
-    File file = new File("xanadu.txt");
+    File file = new File("./out/xanadu.txt");
 
     if (!file.exists()) {
       FileOutputStream outputStream = new FileOutputStream(file);
