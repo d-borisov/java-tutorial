@@ -2,13 +2,10 @@ package oleg.path;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
-import java.io.RandomAccessFile;
 import java.nio.ByteBuffer;
-import java.nio.channels.FileChannel;
 import java.nio.channels.SeekableByteChannel;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -27,7 +24,6 @@ public class ReadingWritingCreatingFiles {
     forSmallFiles(path);
     textFiles(path);
     streams(path);
-    channels(path);
     byteBuffers(path);
   }
 
@@ -83,48 +79,6 @@ public class ReadingWritingCreatingFiles {
     }
   }
 
-  /*
-  * To the right of those are the methods for dealing with
-  * ByteChannels,
-  * SeekableByteChannels,
-  * and ByteBuffers, such as the newByteChannel method.
-  * */
-  private static void channels(Path path) throws IOException {
-    out.println("===>> channels <<===");
-
-    try (final FileChannel fc1 = (FileChannel) Files.newByteChannel(path)) {
-    }
-    try (final FileChannel fc2 = new FileInputStream(path.toFile()).getChannel()) {
-    }
-    try (final FileChannel fc3 = new RandomAccessFile(path.toFile(), "rw").getChannel()) {
-    }
-    try (final FileChannel fc4 = FileChannel.open(path)) {
-    }
-
-    String s = "I was here!\n";
-    byte data[] = s.getBytes();
-    ByteBuffer out = ByteBuffer.wrap(data);
-
-    ByteBuffer copy = ByteBuffer.allocate(12);
-
-    try (FileChannel fc = FileChannel.open(path)) {
-      int nread;
-      do {
-        nread = fc.read(copy);
-      } while (nread != -1 && copy.hasRemaining());
-
-      fc.position(0);
-      while (out.hasRemaining()) fc.write(out);
-      out.rewind();
-
-      long length = fc.size();
-      fc.position(length - 1);
-      copy.flip();
-      while (copy.hasRemaining()) fc.write(copy);
-      while (out.hasRemaining()) fc.write(out);
-    }
-
-  }
 
   public static void byteBuffers(Path path) throws IOException {
     try (final SeekableByteChannel sbc = Files.newByteChannel(path)) {
