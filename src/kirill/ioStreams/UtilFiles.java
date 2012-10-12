@@ -6,11 +6,14 @@ import java.io.IOException;
 
 public class UtilFiles {
 
-  public static void checkFileAndCreateIfNotExist(String fileName, String content) {
-    File file = new File("./out/" + fileName);
+  public static File checkTxtFileAndCreateIfNotExist(String fileName, String content) {
 
-    if("".equals(content)){
-      content = "hello world, man!";
+    File file = null;
+
+    try {
+      file = File.createTempFile(fileName, ".txt");
+    } catch (IOException e) {
+      e.printStackTrace();
     }
 
     if (!file.exists()) {
@@ -21,5 +24,7 @@ public class UtilFiles {
         e.printStackTrace();
       }
     }
+
+    return file;
   }
 }
