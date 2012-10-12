@@ -6,7 +6,7 @@ import java.io.IOException;
 
 public class UtilFiles {
 
-  static void checkFileAndCreateIfNotExist(String fileName, String content) {
+  public static void checkFileAndCreateIfNotExist(String fileName, String content) {
     File file = new File("./out/" + fileName);
 
     if("".equals(content)){
