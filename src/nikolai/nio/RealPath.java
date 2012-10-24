@@ -15,6 +15,9 @@ import static java.lang.String.format;
 public class RealPath {
   public static void main(String[] args) throws IOException {
     Path path = Paths.get("xanadu.txt");
+    if (!Files.exists(path)){
+      Files.createFile(path);
+    }
     System.out.println("Exists " + Files.exists(path, LinkOption.NOFOLLOW_LINKS));
     System.out.println("isReadable " + Files.isReadable(path));
 
