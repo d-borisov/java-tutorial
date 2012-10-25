@@ -1,4 +1,4 @@
-package oleg;
+package oleg.basics;
 
 public class ImmutableBicycle {
   private final int cadence;

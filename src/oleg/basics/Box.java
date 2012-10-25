@@ -1,4 +1,4 @@
-package oleg;
+package oleg.basics;
 
 public class Box<T> {
   private T t; // T stands for "Type"

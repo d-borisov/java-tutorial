@@ -1,5 +1,6 @@
-package oleg;
+package oleg.basics;
 
+import oleg.basics.ImmutableBicycle;
 import org.junit.Test;
 
 import static org.hamcrest.CoreMatchers.is;

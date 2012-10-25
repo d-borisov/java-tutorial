@@ -1,4 +1,4 @@
-package oleg;
+package oleg.basics;
 
 public class BreakWithLabelDemo {
   public static void main(String[] args) {

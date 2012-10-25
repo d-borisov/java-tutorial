@@ -1,6 +1,4 @@
-package oleg;
-
-import java.awt.*;
+package oleg.basics;
 
 public class Payment {
 

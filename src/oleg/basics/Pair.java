@@ -1,4 +1,4 @@
-package oleg;
+package oleg.basics;
 
 public class Pair<K, V> {
 

@@ -1,4 +1,4 @@
-package oleg;
+package oleg.basics;
 
 import java.util.ArrayList;
 import java.util.List;

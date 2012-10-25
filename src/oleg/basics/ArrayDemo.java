@@ -1,4 +1,4 @@
-package oleg;
+package oleg.basics;
 
 class ArrayDemo {
 
