@@ -1,4 +1,4 @@
-package nikolai.concurrency;
+package nikolai.concurrency.threads;
 
 public class HelloRunnable implements Runnable {
   @Override

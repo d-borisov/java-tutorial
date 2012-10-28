@@ -1,4 +1,4 @@
-package nikolai.concurrency;
+package nikolai.concurrency.syncronization;
 
 public class Counter {
   private int c = 0;

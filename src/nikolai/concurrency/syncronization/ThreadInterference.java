@@ -1,4 +1,4 @@
-package nikolai.concurrency;
+package nikolai.concurrency.syncronization;
 
 public class ThreadInterference {
 
@@ -9,7 +9,7 @@ public class ThreadInterference {
     Thread a = new Thread(){
       @Override
       public void run() {
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 1000; i++) {
           counter.increment();
         }
         System.out.println(this.getName() + " value: " + counter.value());
@@ -19,7 +19,7 @@ public class ThreadInterference {
     Thread b = new Thread(){
       @Override
       public void run() {
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 1000; i++) {
           counter.decrement();
         }
         System.out.println(this.getName() + " value: " + counter.value());
@@ -30,7 +30,7 @@ public class ThreadInterference {
     a.start();
     b.start();
 
-    System.out.println("value: " + counter.value());
+    System.out.println("value should be zero: " + counter.value());
   }
 
 }
