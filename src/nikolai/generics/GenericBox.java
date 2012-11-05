@@ -2,6 +2,8 @@ package nikolai.generics;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 
 public class GenericBox<T> {
   private T t;

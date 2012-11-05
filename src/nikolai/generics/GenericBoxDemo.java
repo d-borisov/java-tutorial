@@ -20,7 +20,7 @@ public class GenericBoxDemo {
 
   public static void main(String[] args) {
     java.util.ArrayList<GenericBox<Integer>> listOfIntegerBoxes = new java.util.ArrayList<>();
-    GenericBoxDemo.<Integer>addBox(Integer.valueOf(10), listOfIntegerBoxes);
+    GenericBoxDemo.addBox(Integer.valueOf(10), listOfIntegerBoxes);
     GenericBoxDemo.addBox(Integer.valueOf(30), listOfIntegerBoxes);
     GenericBoxDemo.addBox(Integer.valueOf(20), listOfIntegerBoxes);
     GenericBoxDemo.outputBoxes(listOfIntegerBoxes);
