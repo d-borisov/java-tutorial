@@ -2,12 +2,12 @@ package oleg.threads;
 
 public class SimpleThreads {
 
-  public static void main(String args[]) throws InterruptedException {
+  public static void main(final String args[]) throws InterruptedException {
     final long patience = getPatience(args);
     message("Starting MessageLoop thread");
-    long startTime = System.currentTimeMillis();
+    final long startTime = System.currentTimeMillis();
 
-    Thread t = new Thread(new MessageLoop());
+    final Thread t = new Thread(new MessageLoop());
     t.start();
 
     message("Waiting for MessageLoop thread to finish");
@@ -36,7 +36,6 @@ public class SimpleThreads {
     }
     return (long) (1000 * 60 * 60);
   }
-
 
   private static class MessageLoop implements Runnable {
 
