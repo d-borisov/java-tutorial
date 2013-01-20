@@ -1,4 +1,4 @@
-package nikolai.concurrency;
+package nikolai.concurrency.threads;
 
 public class Interrupt {
   public static void doSomething(int in) {

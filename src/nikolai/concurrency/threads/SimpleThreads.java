@@ -1,4 +1,4 @@
-package nikolai.concurrency;
+package nikolai.concurrency.threads;
 
 import static java.lang.Thread.sleep;
 
