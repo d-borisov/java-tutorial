@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 import java.util.SortedSet;
 import java.util.TreeSet;
 
@@ -62,6 +63,37 @@ public class SortedSetTest extends Assert {
 
     notUnique.removeAll(new HashSet<Object>(unique));
     assertThat(notUnique.size(), is(3));
+  }
+
+  @Test
+  public void rangeViewTest() {
+    SortedSet<String> set = new TreeSet<>();
+    set.add("H");
+    set.add("I");
+    set.add("J");
+    set.add("K");
+    set.add("L");
+    set.add("M");
+    set.add("N");
+    assertThat(set.size(), is(7));
+
+    SortedSet<String> subSet = set.subSet("A", "J");
+    assertThat(subSet.size(), is(2));//H,I,J
+
+    subSet = set.subSet("A", "J\0");
+    assertThat(subSet.size(), is(3));//H,I,J
+
+    subSet = set.subSet("H", "I");
+    assertThat(subSet.size(), is(1));//H
+
+    subSet = set.subSet("H\0", "I");
+    assertThat(subSet.size(), is(0));
+
+    SortedSet<String> headSet = set.headSet("L");
+    assertThat(headSet.size(), is(4));//H,I,J,K
+
+    SortedSet<String> tailSet = set.tailSet("L");
+    assertThat(tailSet.size(), is(3));//L,M,N
   }
 
 
