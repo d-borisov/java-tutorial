@@ -1,6 +1,5 @@
 package dima.generics.mvc.agregations;
 
-import dima.generics.mvc.factories.ViewsFactory;
 import dima.generics.mvc.base.BaseModel;
 import dima.generics.mvc.first.FirstModel;
 
